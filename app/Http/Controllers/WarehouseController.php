@@ -40,9 +40,10 @@ class WarehouseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $bahan = Warehouse::whereId($id)->first();
+        return view('warehouse.show', ['bahan'=>$bahan]);
     }
 
     /**

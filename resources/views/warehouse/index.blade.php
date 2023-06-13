@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-datatable table-responsive pt-0">
-            <h1 class="mt-3">Test <a href="{{ route('warehouse.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Master</a></h1>
+            <h1 class="mt-3">Dashboard <a href="{{ route('warehouse.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Master</a></h1>
             <table class="datatables-basic table table-bordered" id="example">
                 <thead>
                     <tr>
@@ -26,6 +26,7 @@
                             <td>{{ $item->grade }}</td>
                             <td>
                                 <a href="{{ route('warehouse.edit', ['id'=>$item->id]) }}" class="btn btn-primary" >Edit</a>
+                                <a href="{{ route('warehouse.show', ['id'=>$item->id]) }}" class="btn btn-secondary" >Show</a>
                                 <a href="javascript:void(0);" class="btn btn-danger" onclick="confirmDelete('{{ $item->id }}', '{{ route('warehouse.destroy', ['id'=>$item->id]) }}')">Delete</a>
                             </td>
                         </tr>

@@ -25,6 +25,7 @@ Route::get('/', function () {
 Route::get('/warehouse', [WarehouseController::class, 'index'])->name('warehouse.index');
 Route::get('/warehouse/create', [WarehouseController::class, 'create'])->name('warehouse.create');
 Route::get('/warehouse/edit/{id}', [WarehouseController::class, 'edit'])->name('warehouse.edit');
+Route::get('/warehouse/show/{id}', [WarehouseController::class, 'show'])->name('warehouse.show');
 Route::post('/warehouse/update/{id}', [WarehouseController::class, 'update'])->name('warehouse.update');
 Route::get('/warehouse/destroy/{id}', [WarehouseController::class, 'destroy'])->name('warehouse.destroy');
 Route::post('/warehouse/store', [WarehouseController::class, 'store'])->name('warehouse.store');
