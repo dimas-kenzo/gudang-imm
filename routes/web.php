@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WarehouseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,10 +22,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/warehouse', function (){
-    return view('warehouse.index');
-})->name('warehouse.index');
-
-Route::get('/warehouse/create', function (){
-    return view('warehouse.create');
-})->name('warehouse.create');
+Route::get('/warehouse', [WarehouseController::class, 'index'])->name('warehouse.index');
+Route::get('/warehouse/create', [WarehouseController::class, 'create'])->name('warehouse.create');
+Route::get('/warehouse/edit/{id}', [WarehouseController::class, 'edit'])->name('warehouse.edit');
+Route::post('/warehouse/update/{id}', [WarehouseController::class, 'update'])->name('warehouse.update');
+Route::get('/warehouse/destroy/{id}', [WarehouseController::class, 'destroy'])->name('warehouse.destroy');
+Route::post('/warehouse/store', [WarehouseController::class, 'store'])->name('warehouse.store');
