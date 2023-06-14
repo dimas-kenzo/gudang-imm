@@ -2,7 +2,14 @@
 @section('content')
     <div class="card">
         <div class="card-datatable table-responsive pt-0">
-            <h1 class="mt-3">List Bahan<a href="{{ route('warehouse.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Create Bahan</a></h1>
+            <h1 class="mt-3">Database
+                <a href="{{ route('stock.input') }}" class="btn btn-danger float-end">
+                    <i class="mdi mdi-minus me-2"></i>Output
+                </a>
+                <a href="{{ route('stock.input') }}" class="btn btn-success float-end me-2">
+                    <i class="mdi mdi-plus"></i>Input
+                </a>
+            </h1>
             <table class="datatables-basic table table-bordered table-striped" id="example">
                 <thead>
                     <tr>
@@ -12,7 +19,8 @@
                         <th>Kriteria 2</th>
                         <th>Keterangan</th>
                         <th>Grade</th>
-                        <th>Action</th>
+                        <th>Stok</th>
+                        <th>Kode Produksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,11 +32,8 @@
                             <td>{{ $item->criteria_2 }}</td>
                             <td>{{ $item->information }}</td>
                             <td>{{ $item->grade }}</td>
-                            <td>
-                                <a href="{{ route('warehouse.edit', ['id'=>$item->id]) }}" class="btn btn-primary" >Edit</a>
-                                <a href="{{ route('warehouse.show', ['id'=>$item->id]) }}" class="btn btn-secondary" >Show</a>
-                                <a href="javascript:void(0);" class="btn btn-danger" onclick="confirmDelete('{{ $item->id }}', '{{ route('warehouse.destroy', ['id'=>$item->id]) }}')">Delete</a>
-                            </td>
+                            <td>{{ $item->stock }}</td>
+                            <td>{{ $item->productioncode }}</td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -39,7 +44,7 @@
     <script>
         function confirmDelete(id, redirect) {
             if (confirm('Apakah anda yakin ingin menghapus data ini?')) {
-                window.location.href= redirect;
+                window.location.href = redirect;
             }
         };
     </script>

@@ -7,7 +7,7 @@
                     <h5 class="mb-0">Create Bahan</h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('warehouse.store') }}" method="POST">
+                    <form action="{{ route('stock.store') }}" method="POST">
                         @csrf
                         <div class="form-floating form-floating-outline mb-4">
                             <input type="text" class="form-control" id="basic-default-fullname" placeholder="Nama Bahan"
