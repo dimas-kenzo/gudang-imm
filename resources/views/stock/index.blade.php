@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-datatable table-responsive pt-0">
-            <h1 class="mt-3 px-2">List Bahan -> Grade 1<a href="{{ route('warehouse.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Bahan</a></h1>
+            <h1 class="mt-3 px-2">List Bahan -> Grade 1<a href="{{ route('stock.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Bahan</a></h1>
             <table class="datatables-basic table table-bordered table-striped" id="example-1">
                 <thead>
                     <tr>
@@ -39,7 +39,7 @@
     </div>
     <div class="card">
         <div class="card-datatable table-responsive pt-0">
-            <h1 class="mt-3 px-2">List Bahan -> Grade 2<a href="{{ route('warehouse.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Bahan</a></h1>
+            <h1 class="mt-3 px-2">List Bahan -> Grade 2<a href="{{ route('stock.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Bahan</a></h1>
             <table class="datatables-basic table table-bordered table-striped" id="example-2">
                 <thead>
                     <tr>
@@ -76,7 +76,7 @@
     </div>
     <div class="card">
         <div class="card-datatable table-responsive pt-0">
-            <h1 class="mt-3 px-2">List Bahan -> Grade 3<a href="{{ route('warehouse.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Bahan</a></h1>
+            <h1 class="mt-3 px-2">List Bahan -> Grade 3<a href="{{ route('stock.create') }}" class="btn btn-success float-end"><i class="mdi mdi-plus me-2"></i>Input Bahan</a></h1>
             <table class="datatables-basic table table-bordered table-striped" id="example-3">
                 <thead>
                     <tr>

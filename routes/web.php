@@ -34,7 +34,7 @@ Route::get('/warehouse/destroy/{id}', [WarehouseController::class, 'destroy'])->
 Route::post('/warehouse/store', [WarehouseController::class, 'store'])->name('warehouse.store');
 
 Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
-Route::get('/stock/input', [StockController::class, 'create'])->name('stock.input');
+Route::get('/stock/create', [StockController::class, 'create'])->name('stock.create');
 Route::get('/stock/edit/{id}', [StockController::class, 'edit'])->name('stock.edit');
 Route::get('/stock/show/{id}', [StockController::class, 'show'])->name('stock.show');
 Route::post('/stock/update/{id}', [StockController::class, 'update'])->name('stock.update');

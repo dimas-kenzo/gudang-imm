@@ -24,7 +24,8 @@
                             <td>{{ $item->information }}</td>
                             <td>{{ $item->grade }}</td>
                             <td>
-                                <a href="{{ route('warehouse.edit', ['id' => $item->id]) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('warehouse.edit', ['id' => $item->id]) }}" class="btn btn-primary"><i class="mdi mdi-pencil me-2"></i>Edit</a>
+                                <a href="javascript:void(0);" class="btn btn-danger" onclick="confirmDelete('{{ $item->id }}', '{{ route('warehouse.destroy', ['id'=>$item->id]) }}')"><i class="mdi mdi-delete me-2"></i>Delete</a>
                             </td>
                         </tr>
                     @endforeach
