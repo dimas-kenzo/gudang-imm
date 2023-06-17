@@ -4,7 +4,7 @@
         <div class="col-xl">
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Create Bahan</h5>
+                    <h5 class="mb-0">Form Input Bahan</h5>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('warehouse.store') }}" method="POST">
@@ -38,6 +38,16 @@
                                 <option value="3">3</option>
                             </select>
                             <label for="basic-default-company">Grade</label>
+                        </div>
+                        <div class="form-floating form-floating-outline mb-4">
+                            <input type="number" class="form-control" id="basic-default-company" placeholder="Keterangan"
+                                name="information" />
+                            <label for="basic-default-company">Qty Input</label>
+                        </div>
+                        <div class="form-floating form-floating-outline mb-4">
+                            <input type="text" class="form-control" id="basic-default-company" placeholder="Keterangan"
+                                name="information" />
+                            <label for="basic-default-company">Kode Produksi</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Send</button>
                     </form>

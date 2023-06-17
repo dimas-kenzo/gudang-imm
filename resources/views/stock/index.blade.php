@@ -2,18 +2,10 @@
 @section('content')
     <div class="card">
         <div class="card-datatable table-responsive pt-0">
-            <h1 class="mt-3">Database
-                <a href="{{ route('stock.input') }}" class="btn btn-danger float-end">
-                    <i class="mdi mdi-minus me-2"></i>Output
-                </a>
-                <a href="{{ route('stock.input') }}" class="btn btn-success float-end me-2">
-                    <i class="mdi mdi-plus"></i>Input
-                </a>
-            </h1>
+            <h1 class="mt-3">Log I/O</h1>
             <table class="datatables-basic table table-bordered table-striped" id="example">
                 <thead>
                     <tr>
-                        <th>id</th>
                         <th>Nama Bahan</th>
                         <th>Kriteria 1</th>
                         <th>Kriteria 2</th>
