@@ -93,13 +93,13 @@
                 <tbody>
                     @foreach ($all as $item)
                         <tr>
-                            <td>{{ $item->id }}</td>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->criteria_1 }}</td>
                             <td>{{ $item->criteria_2 }}</td>
                             <td>{{ $item->information }}</td>
                             <td>{{ $item->grade }}</td>
-                            <td>{{ $item->grade }}</td>
+                            <td>{{ $item->baseqty }}</td>
+                            <td>{{ $item->productioncode }}</td>
                             <td>
                                 <a href="{{ route('warehouse.edit', ['id'=>$item->id]) }}" class="btn btn-primary" >Output</a>
                                 {{-- <a href="{{ route('warehouse.show', ['id'=>$item->id]) }}" class="btn btn-secondary" >Show</a> --}}

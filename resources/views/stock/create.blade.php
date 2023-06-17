@@ -4,15 +4,17 @@
         <div class="col-xl">
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Form Output Bahan</h5>
+                    <h5 class="mb-0">Form Input Bahan</h5>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('stock.store') }}" method="POST">
                         @csrf
                         <div class="form-floating form-floating-outline mb-4">
-                            <input type="text" class="form-control" id="basic-default-fullname" placeholder="Nama Bahan"
-                                name="name" />
-                            <label for="basic-default-fullname">Nama Bahan</label>
+                            <select name="warehouse_id" class="form-select" id="">
+                                @foreach ($master_warehouse as $item)
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-floating form-floating-outline mb-4">
                             <input type="text" class="form-control" id="basic-default-company" placeholder="Kriteria 1"
@@ -40,16 +42,16 @@
                             <label for="basic-default-company">Grade</label>
                         </div>
                         <div class="form-floating form-floating-outline mb-4">
-                            <input type="number" class="form-control" id="basic-default-company" placeholder="Keterangan"
-                                name="information" />
-                            <label for="basic-default-company">Qty Output</label>
+                            <input type="number" class="form-control" id="basic-default-company" placeholder="Qty"
+                                name="inputqty" />
+                            <label for="basic-default-company">Qty</label>
                         </div>
                         <div class="form-floating form-floating-outline mb-4">
-                            <input type="text" class="form-control" id="basic-default-company" placeholder="Keterangan"
-                                name="information" />
+                            <input type="text" class="form-control" id="basic-default-company"
+                                placeholder="Kode Produksi" name="productioncode" />
                             <label for="basic-default-company">Kode Produksi</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                     @if ($errors->has('grade'))
                         <div class="alert alert-danger mt-3">{{ $errors->first('grade') }}</div>
