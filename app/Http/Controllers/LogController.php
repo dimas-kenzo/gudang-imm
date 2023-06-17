@@ -12,6 +12,6 @@ class LogController extends Controller
     public function index()
     {
         $all = log::all();
-        return view('log.index', ['all'=>$all]);
+        return view('stock.log', ['all'=>$all]);
     }
 }

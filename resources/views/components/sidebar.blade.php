@@ -69,7 +69,7 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="dashboards-ecommerce.html" class="menu-link">
+                    <a href="{{ route('warehouse.index') }}" class="menu-link">
                         <div>DB Bahan</div>
                     </a>
                 </li>
@@ -85,12 +85,12 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{ route('warehouse.create') }}" class="menu-link">
+                    <a href="{{ route('stock.index') }}" class="menu-link">
                         <div>Dashboard</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('stock.input') }}" class="menu-link">
+                    <a href="{{ route('log.index') }}" class="menu-link">
                         <div>Log I/O</div>
                     </a>
                 </li>
